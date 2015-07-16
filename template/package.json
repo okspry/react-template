@@ -1,0 +1,24 @@
+{
+  "name": "excavator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "browserify -t reactify js/main.js > js/build.js",
+    "start": "watchify -o js/build.js -v -d js/main.js"
+  },
+  "author": "Ken Spry",
+  "license": "MIT",
+  "dependencies": {
+    "browserify": "^10.2.6",
+    "immutable": "^3.7.4",
+    "material-ui": "^0.10.1",
+    "ramda": "^0.16.0",
+    "react": "^0.13.3",
+    "reactify": "^1.1.1",
+    "watchify": "^3.2.3"
+  },
+  "browserify": {
+    "transform": [ "reactify" ]
+  }
+}
